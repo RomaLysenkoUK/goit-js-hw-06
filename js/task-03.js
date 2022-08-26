@@ -12,3 +12,26 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+// Використовуй масив об'єктів images для створення елементів <img>, вкладених в <li>.
+// Для створення розмітки використовуй шаблонні рядки і метод insertAdjacentHTML().
+
+// Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
+// Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
+
+
+const list = document.querySelector(".gallery");
+
+const markup = images
+  .map((img) => `<li class="list-item"><img src=${img.url} alt=${img.alt} width="200"></li>`)
+  .join("");
+
+list.style.listStyle = "none";
+list.style.display = "flex";
+
+
+
+// const styleItem = document.querySelector('.list-item')
+// styleItem.style.border = "2px solid tomato"
+list.insertAdjacentHTML("beforeend", markup);
