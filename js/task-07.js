@@ -14,10 +14,11 @@
 
 const asp = document.querySelector("#font-size-control");
 asp.addEventListener("input", (event) => {
+  const { target } = event;
   if (
-    event.target.value >= event.target.getAttribute("min") &&
-    event.target.value <= event.target.getAttribute("max")
+    target.value >= target.getAttribute("min") &&
+    target.value <= target.getAttribute("max")
   ) {
-    document.querySelector("#text").style.fontSize = `${event.target.value}px`;
+    document.querySelector("#text").style.fontSize = `${target.value}px`;
   }
 });
