@@ -37,3 +37,5 @@ form.addEventListener("submit", (event) => {
   document.querySelector(".login-form").reset();
   console.log(obj);
 });
+
+// Спросить у Руслана почему не заходит в Лэйбл а напрямую в инпут!
